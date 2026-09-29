@@ -1,28 +1,52 @@
 # @stackline/retext-profanities
 
-Independent maintenance fork of `retext-profanities@7.2.2`, preserving its API and published type declarations.
+> retext plugin to check for profane and vulgar wording.
 
-```sh
+[![npm version](https://img.shields.io/npm/v/@stackline/retext-profanities.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/retext-profanities)
+[![license](https://img.shields.io/npm/l/@stackline/retext-profanities.svg?style=flat-square)](https://github.com/alexandroit/stackline-retext-profanities)
+[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-retext-profanities-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-retext-profanities)
+[![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/retext-profanities/)
+[![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
+
+**[Documentation](https://alexandro.net/docs/vanilla/retext-profanities/)** | **[npm](https://www.npmjs.com/package/@stackline/retext-profanities)** | **[Issues](https://github.com/alexandroit/stackline-retext-profanities/issues)** | **[Repository](https://github.com/alexandroit/stackline-retext-profanities)**
+
+**Current package version:** `1.0.1`
+
+---
+
+## Why this package?
+
+`@stackline/retext-profanities` is the Stackline-maintained distribution of `retext-profanities@7.2.2`. It is an independent continuation of [retext-profanities](https://github.com/retextjs/retext-profanities); original authors and licenses remain credited below.
+
+## Compatibility
+
+| Item | Value |
+| :--- | :--- |
+| Package | `@stackline/retext-profanities@1.0.1` |
+| API target | `retext-profanities@7.2.2` |
+| Supported Node.js | `See supported framework requirements` |
+| License | `MIT` |
+| Module type | `module` |
+| Main entry | `index.js` |
+| Types | `index.d.ts` |
+| Runtime dependencies | `cuss, unified, pluralize, quotation, @types/nlcst, nlcst-search, nlcst-to-string, unist-util-position` |
+
+## Installation
+
+```bash
 npm install @stackline/retext-profanities
-# Keep existing imports:
-npm install retext-profanities@npm:@stackline/retext-profanities@1.0.0
 ```
 
-[Stackline](https://alexandro.net/) · [Issues](https://github.com/alexandroit/stackline-retext-profanities/issues) · [Community](https://www.reddit.com/r/Stackline/)
+Preserve existing imports and plugin resolution with an npm alias:
 
-See [UPSTREAM.md](UPSTREAM.md) for source identity and issue review, and [CHANGELOG.md](CHANGELOG.md) for maintenance changes. Functional tests also run against the final npm tarball; releases are published from GitHub Actions with provenance.
+```bash
+npm install retext-profanities@npm:@stackline/retext-profanities
+```
 
-## Upstream documentation
+## Usage and API reference
 
-# retext-profanities
+### retext-profanities
 
-[![Build][build-badge]][build]
-[![Coverage][coverage-badge]][coverage]
-[![Downloads][downloads-badge]][downloads]
-[![Size][size-badge]][size]
-[![Sponsors][sponsors-badge]][collective]
-[![Backers][backers-badge]][collective]
-[![Chat][chat-badge]][chat]
 
 **[retext][]** plugin to check for possible profane and vulgar wording.
 
@@ -59,7 +83,7 @@ This package is [ESM only][esm].
 In Node.js (version 14.14+, 16.0+), install with [npm][]:
 
 ```sh
-npm install retext-profanities
+npm install @stackline/retext-profanities
 ```
 
 In Deno with [`esm.sh`][esmsh]:
@@ -91,7 +115,7 @@ import {read} from 'to-vfile'
 import {reporter} from 'vfile-reporter'
 import {unified} from 'unified'
 import retextEnglish from 'retext-english'
-import retextProfanities from 'retext-profanities'
+import retextProfanities from '@stackline/retext-profanities'
 import retextStringify from 'retext-stringify'
 
 const file = await unified()
@@ -151,7 +175,7 @@ the following fields:
 
 ###### `message.source`
 
-Name of this plugin (`'retext-profanities'`).
+Name of this plugin (`'@stackline/retext-profanities'`).
 
 ###### `message.ruleId`
 
@@ -205,7 +229,7 @@ abide by its terms.
 
 [MIT][license] © [Titus Wormer][author]
 
-<!-- Definitions -->
+
 
 [build-badge]: https://github.com/retextjs/retext-profanities/workflows/main/badge.svg
 
@@ -264,3 +288,25 @@ abide by its terms.
 [cuss]: https://github.com/words/cuss
 
 [rules]: rules.md
+
+## Credits and original authors
+
+- Original project: [retext-profanities](https://github.com/retextjs/retext-profanities).
+- Titus Wormer.
+- Sylvan Swierkosz.
+- Mathieu Jolivet.
+- Otacilio Saraiva Maia Neto.
+- Copyright (c) 2016 Titus Wormer <tituswormer@gmail.com>.
+- Stackline maintenance: [Alexandro Paixao Marques](https://www.linkedin.com/in/aleinfo/) and [Stackline contributors](https://github.com/alexandroit).
+
+Original copyright, license notices and contributor acknowledgements remain part of this distribution. Stackline maintenance does not replace authorship of the original work.
+
+## Community and Links
+
+- [Stackline website](https://alexandro.net/)
+- [GitHub projects](https://github.com/alexandroit)
+- [npm packages](https://www.npmjs.com/~alex360qc)
+- [Reddit community — r/Stackline](https://www.reddit.com/r/Stackline/)
+- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
+
+Use this repository's issue tracker for reproducible bugs and feature requests. Join r/Stackline for examples, usage questions and release discussions.
