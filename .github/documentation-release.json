@@ -4,7 +4,7 @@
     {
       "name": "@stackline/retext-profanities",
       "path": "readme.md",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "baselineVersion": "1.0.0",
       "keywords": [
         "stackline",
@@ -26,8 +26,8 @@
       "homepage": "https://alexandro.net/docs/vanilla/retext-profanities/",
       "baselineTarball": "https://registry.npmjs.org/@stackline/retext-profanities/-/retext-profanities-1.0.0.tgz",
       "baselineIntegrity": "sha512-5JDG6ThXvZ4WFcoF4OWu3aw90hoWMe5kbS+QeJ93lh7N2UGqrOLvoIWIj3PDmB0hhCSmM35V8F7/eEGnxF6DrA==",
-      "expectedSha512": "b54f812303a6e5c21647721d82e52c60194c0ea7dd6932bea880fefcd528388b76213f5d90a0b2fa3968539444754a2b7f5819d1823196778c7cd4f4bfc3a781",
-      "tag": "docs-stackline-retext-profanities-v1.0.1"
+      "expectedSha512": "315b406ec6279a2943d55867c7e68ea7c3351934145bd5dc88adceddcb7395252038cb4b39d1129d29aef8e186a6058061e4074e1b7e58bced7e148b17d00fa0",
+      "tag": "docs-stackline-retext-profanities-v1.0.2"
     }
   ]
 }
