@@ -1,0 +1,33 @@
+{
+  "repository": "alexandroit/stackline-retext-profanities",
+  "packages": [
+    {
+      "name": "@stackline/retext-profanities",
+      "path": "readme.md",
+      "version": "1.0.1",
+      "baselineVersion": "1.0.0",
+      "keywords": [
+        "stackline",
+        "npm-package",
+        "retext-profanities",
+        "typescript",
+        "unified",
+        "retext",
+        "retext-plugin",
+        "plugin",
+        "profane",
+        "profanity",
+        "cuss",
+        "obscene",
+        "vulgar",
+        "profanities",
+        "maintenance-fork"
+      ],
+      "homepage": "https://alexandro.net/docs/vanilla/retext-profanities/",
+      "baselineTarball": "https://registry.npmjs.org/@stackline/retext-profanities/-/retext-profanities-1.0.0.tgz",
+      "baselineIntegrity": "sha512-5JDG6ThXvZ4WFcoF4OWu3aw90hoWMe5kbS+QeJ93lh7N2UGqrOLvoIWIj3PDmB0hhCSmM35V8F7/eEGnxF6DrA==",
+      "expectedSha512": "b54f812303a6e5c21647721d82e52c60194c0ea7dd6932bea880fefcd528388b76213f5d90a0b2fa3968539444754a2b7f5819d1823196778c7cd4f4bfc3a781",
+      "tag": "docs-stackline-retext-profanities-v1.0.1"
+    }
+  ]
+}
