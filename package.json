@@ -1,8 +1,32 @@
 {
-  "name": "retext-profanities",
-  "version": "7.2.2",
-  "description": "retext plugin to check for profane and vulgar wording",
+  "xo": {
+    "prettier": true
+  },
+  "bugs": {
+    "url": "https://github.com/alexandroit/stackline-retext-profanities/issues"
+  },
+  "main": "index.js",
+  "name": "@stackline/retext-profanities",
+  "type": "module",
+  "types": "index.d.ts",
+  "author": {
+    "url": "https://wooorm.com",
+    "name": "Titus Wormer",
+    "email": "tituswormer@gmail.com"
+  },
+  "funding": {
+    "url": "https://opencollective.com/unified",
+    "type": "opencollective"
+  },
   "license": "MIT",
+  "scripts": {
+    "test:upstream": "node --conditions development test.js",
+    "test": "npm run test:upstream",
+    "build": "node scripts/check-payload.mjs",
+    "test:package": "node scripts/test-package.mjs",
+    "test:types": "tsc --ignoreConfig --noEmit --module NodeNext --moduleResolution NodeNext --target ES2022 --strict test/stackline-types.mts"
+  },
+  "homepage": "https://github.com/alexandroit/stackline-retext-profanities#readme",
   "keywords": [
     "unified",
     "retext",
@@ -13,86 +37,52 @@
     "cuss",
     "obscene",
     "vulgar",
-    "profanities"
+    "profanities",
+    "stackline",
+    "maintenance-fork"
   ],
-  "repository": "retextjs/retext-profanities",
-  "bugs": "https://github.com/retextjs/retext-profanities/issues",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/unified"
+  "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSpacing": false
   },
-  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
-  "contributors": [
-    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
-    "Sylvan Swierkosz <sswierkosz@gmail.com>",
-    "Mathieu Jolivet",
-    "Otacilio Saraiva Maia Neto <otacilio.n97@gmail.com>"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandroit/stackline-retext-profanities.git"
+  },
+  "description": "retext plugin to check for profane and vulgar wording",
+  "directories": {},
   "sideEffects": false,
-  "type": "module",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "files": [
-    "ar-latn.d.ts",
-    "ar-latn.js",
-    "en.d.ts",
-    "en.js",
-    "es.d.ts",
-    "es.js",
-    "factory.d.ts",
-    "factory.js",
-    "fr.d.ts",
-    "fr.js",
-    "index.d.ts",
-    "index.js",
-    "it.d.ts",
-    "it.js",
-    "pt.d.ts",
-    "pt.js"
+  "contributors": [
+    {
+      "url": "https://wooorm.com",
+      "name": "Titus Wormer",
+      "email": "tituswormer@gmail.com"
+    },
+    {
+      "name": "Sylvan Swierkosz",
+      "email": "sswierkosz@gmail.com"
+    },
+    {
+      "name": "Mathieu Jolivet"
+    },
+    {
+      "name": "Otacilio Saraiva Maia Neto",
+      "email": "otacilio.n97@gmail.com"
+    }
   ],
   "dependencies": {
-    "@types/nlcst": "^1.0.0",
     "cuss": "^2.0.0",
-    "nlcst-search": "^3.0.0",
-    "nlcst-to-string": "^3.0.0",
+    "unified": "^10.0.0",
     "pluralize": "^8.0.0",
     "quotation": "^2.0.0",
-    "unified": "^10.0.0",
+    "@types/nlcst": "^1.0.0",
+    "nlcst-search": "^3.0.0",
+    "nlcst-to-string": "^3.0.0",
     "unist-util-position": "^4.0.0"
-  },
-  "devDependencies": {
-    "@types/mdast": "^3.0.0",
-    "@types/node": "^18.0.0",
-    "@types/pluralize": "^0.0.29",
-    "c8": "^7.0.0",
-    "mdast-util-heading-range": "^3.0.0",
-    "prettier": "^2.0.0",
-    "remark-cli": "^11.0.0",
-    "remark-preset-wooorm": "^9.0.0",
-    "retext": "^8.0.0",
-    "type-coverage": "^2.0.0",
-    "typescript": "^4.0.0",
-    "unist-builder": "^3.0.0",
-    "xo": "^0.53.0"
-  },
-  "scripts": {
-    "prepack": "npm run build && npm run format",
-    "build": "tsc --build --clean && tsc --build && type-coverage",
-    "format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
-    "test-api": "node --conditions development test.js",
-    "test-coverage": "c8 --check-coverage --100 --reporter lcov npm run test-api",
-    "test": "npm run build && npm run format && npm run test-coverage"
-  },
-  "prettier": {
-    "tabWidth": 2,
-    "useTabs": false,
-    "singleQuote": true,
-    "bracketSpacing": false,
-    "semi": false,
-    "trailingComma": "none"
-  },
-  "xo": {
-    "prettier": true
   },
   "remarkConfig": {
     "plugins": [
@@ -111,9 +101,41 @@
     ]
   },
   "typeCoverage": {
-    "atLeast": 100,
     "detail": true,
     "strict": true,
+    "atLeast": 100,
     "ignoreCatch": true
-  }
+  },
+  "devDependencies": {
+    "retext": "^8.0.0",
+    "typescript": "7.0.2",
+    "@types/node": "24.12.2"
+  },
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "ar-latn.d.ts",
+    "ar-latn.js",
+    "en.d.ts",
+    "en.js",
+    "es.d.ts",
+    "es.js",
+    "factory.d.ts",
+    "factory.js",
+    "fr.d.ts",
+    "fr.js",
+    "index.d.ts",
+    "index.js",
+    "it.d.ts",
+    "it.js",
+    "license",
+    "pt.d.ts",
+    "pt.js",
+    "readme.md",
+    "UPSTREAM.md",
+    "NOTICE",
+    "CHANGELOG.md"
+  ]
 }
